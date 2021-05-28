@@ -17,11 +17,10 @@ struct ContentView: View {
         NavigationView{
             List(networkModal.posts){ post in
                 NavigationLink(
-                    destination: Text("Destination"),
+                    destination: Text("Hi"),
                     label: {
                         Text(post.id)
-                            Text("Hello")
-                        
+                        Text(post.author.name)
                     })
             }.navigationBarTitle("Post App")
             

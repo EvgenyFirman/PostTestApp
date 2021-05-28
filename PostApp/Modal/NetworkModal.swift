@@ -32,7 +32,7 @@ class NetworkModal: ObservableObject {
                             DispatchQueue.main.async {
                                 
                                 self.posts = results.data.items
-                                print(self.posts)
+                                print(results.data.items[0].contents[0].data.value)
                             }
                         }
                         catch {

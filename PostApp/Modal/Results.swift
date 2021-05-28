@@ -17,10 +17,19 @@ struct Item: Decodable,Identifiable {
     var identification: String  {
         return id
     }
+    let contents: [Contents]
     let id: String
     let author: Author
 }
 struct Author: Decodable {
     let name: String
 }
+struct Contents: Decodable{
+    let data: Val
+    let type: String
+}
+struct Val: Decodable{
+    let value: String?
+}
+
 
